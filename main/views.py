@@ -129,7 +129,7 @@ def nova_conferecia_itens(request):
 
             produto = Validade_Produto(
                 codigo_barras=codigo_barras, 
-                conferencia=id_conferencia, 
+                conferencia=id_conferencias, 
                 data_validade=data_validade, 
                 quantidade=quantidade)     
 
