@@ -1,0 +1,38 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Conferências {% endblock title %}
+
+{% block content %}
+
+<form method="GET">
+
+    {{ filtro.form }}
+
+    <input type="submit" value="Buscar">
+
+</form>
+
+
+<table class="table table-striped table-hover" >
+    <thead>
+      <tr>
+        <th scope="col">Local</th>
+        <th scope="col">Funcionário</th>
+        <th scope="col">Data</th>
+      </tr>
+    </thead>
+
+    {% for c in conferencias %}
+        
+            <tbody>
+                    <tr>
+                        <td scope="col"> <a href="{{ c.get_absolute_url }}">{{ c.corredor.slug }} </a></td>
+                        <td scope="col">{{ c.funcionario }}</td>
+                        <td scope="col">{{ c.data_conferencia }}<td>
+                    </tr>                          
+            </tbody>
+          
+    {% endfor %}
+
+    </table>
+{% endblock content %}

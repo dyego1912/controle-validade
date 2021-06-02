@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %} {{ produto.descricao }} {% endblock title %}
+
+{% block content %}
+    <h2> Descricão: {{ produto.descricao }}</h2>
+    <p>  Código: {{ produto.codigo }}
+    <br> 
+    Código de barras: {{ produto.codigo_barras }}
+    <br>
+    Preço de venda: R$ {{ produto.preco_venda }}
+    <br>
+    Categoria: {{ produto.categoria }}
+    </p>
+{% endblock content %}
+
+

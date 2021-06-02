@@ -1,0 +1,22 @@
+
+{% extends 'main/base.html' %}
+
+{% block title %} Produtos {% endblock %}
+
+{% block content %} 
+    {% for p in produtos %}
+
+    <article> 
+        <h1> <a href="{{ p.get_absolute_url }}" > {{ p.descricao }}</a> </h1>
+        <p> Código: {{ p.codigo }} </p>
+        <p> Preço de venda: R$ {{ p.preco_venda }}</p>
+        <p>Código de barras: {{ p.codigo_barras }}</p>   
+        <p>Categoria: {{ p.categoria }}</p>
+
+    </article>
+    <!--Mostra as 10 primeiras palavras da descrição-->
+    <!--{{ p.descricao|linebreaks|truncatewords:10 }}  -->
+    
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% load bootstrap %}
+
+{% block title %} Nova conferência {% endblock %}
+
+{%block content %} 
+<div class="container">
+    <div class="col-4">
+        <form action="" method="POST">
+            {% csrf_token %}
+                {{ form|bootstrap }}
+            
+            <input type="submit" value="Avançar">
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
